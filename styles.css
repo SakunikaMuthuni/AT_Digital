@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root{
+    --primary-color: #6B3CC9;
+    --secondary-color: #F28D35;
+    --analogous-color-1: #6A44F2;
+    --analogous-color-2: #1CBDDD;
+    --triadic-color-1: #52378C;
+    --dark-color: #78BF91;
+    --text-color: #2F2F2F;
+    --text-color-light: #545A75;
+    --text-color-subtle: #9C9991;
+    --accent-color-wizard-white: #E2F2FE;
+    --accent-color-cuddyl-yarn: #FFF8E0;
+    --error-color: #FF0335;
+    --success-color: #5EB30B;
+    --white: #FFFFFF;
+    --max-width: 1200px;
+    --menu-text-color: #100C08;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter";
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: 100;
+}
+
+.nav{
+    position: relative;
+    height: 77px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 80px;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.nav-logo img{
+    width: 238.89px;
+}
+
+.nav-close-btn,
+.nav-toggle-btn{
+    font-size: 25px;
+    color: var(--white);
+    cursor: pointer;
+    transition: color .4s;
+}
+
+.nav-toggle-btn{
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 376px) {
+    .nav{
+        padding: 26px 20px;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: var(--white);
+        width: 80%;
+        height: 100%;
+        padding: 16px 20px;
+        border: none;
+        transition: right .4s;
+    }
+
+    .nav-close-btn{
+        color: var(--menu-text-color);
+    }
+}
+
+.nav-menu-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    list-style: none;
+}
+
+.nav-link{
+    color: var(--menu-text-color);
+    font-weight: 500;
+    transition: color .4s;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color: var(--text-color-light);
+}
+
+.nav-close-btn{
+    position: absolute;
+    top: 16px;
+    right: 24px;
+}
+
+.show-menu{
+    right: 0;
+}
