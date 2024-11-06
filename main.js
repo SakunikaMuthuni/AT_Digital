@@ -23,3 +23,27 @@ const linkAction = () =>{
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
+
+        var panel = this.nextElementSibling;
+        var icon = this.querySelector("i");
+
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+            icon.classList.remove("ri-subtract-fill");
+            icon.classList.add("ri-add-fill");
+        } else {
+            panel.style.display = "block";
+            icon.classList.remove("ri-add-fill");
+            icon.classList.add("ri-subtract-fill");
+        }
+    });
+}
