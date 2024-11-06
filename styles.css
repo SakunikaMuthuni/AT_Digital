@@ -214,6 +214,7 @@ ul{
     align-items: center;
     font-weight: bold;
     border-radius: 7px;
+    text-align: left;
 }
 
 .accordion i {
@@ -382,6 +383,14 @@ ul{
 
     .alignment{
         padding: 0;
+    }
+
+    .accordion {
+        height: auto;
+    }
+
+    .pannel {
+        height: auto;
     }
 }
 
